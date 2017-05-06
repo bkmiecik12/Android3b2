@@ -5,11 +5,13 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements ActionBar.TabListener{
+public class MainActivity extends AppCompatActivity implements ActionBar.TabListener,Fragment21.OnWyborOpcjiListener{
 
     ActionBar bar;
     private Fragment1 f1;
     private Fragment2 f2;
+    private Fragment2 f21;
+    private Fragment2 f22;
     private Fragment3 f3;
     FragmentTransaction transakcja;
 
@@ -85,5 +87,23 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
 
+    }
+
+    @Override
+    public void onWyborOpcji(int opcja) {
+        FragmentTransaction transakcja2 =
+                getSupportFragmentManager().beginTransaction();
+        transakcja2.detach(f21);
+        transakcja2.detach(f22);
+
+        switch (opcja){
+            case 1:
+                transakcja2.attach(f21);
+                break;
+            case 2:
+                transakcja2.attach(f22);
+                break;
+        }
+        transakcja2.commit();
     }
 }

@@ -10,4 +10,15 @@
             android:layout_height="match_parent"
             android:text="@string/hello_blank_fragment"/>
 
+    <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:name="com.example.bkmiecik.android3b2.Fragment21"
+            android:id="@+id/fragment" android:layout_weight="0.28" tools:layout="@layout/fragment_fragment21"/>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="323dp"
+            android:id="@+id/kontener" android:layout_weight="0.33">
+
+    </FrameLayout>
+
 </FrameLayout>

@@ -1,13 +1,22 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.example.bkmiecik.android3b2.Fragment21">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              tools:context="com.example.bkmiecik.android3b2.Fragment21">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wybierz rodzaj zawodów"/>
 
-</FrameLayout>
+    <RadioGroup android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opcje"
+                tools:ignore="UselessParent">
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/opcja1" android:text="Grand Prix"/>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/opcja2" android:text="Mecz ligowy"/>
+    </RadioGroup>
+
+</LinearLayout>

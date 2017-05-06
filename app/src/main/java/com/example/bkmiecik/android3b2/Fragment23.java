@@ -6,16 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
 
+import com.example.bkmiecik.android3b2.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment22 extends Fragment {
+public class Fragment23 extends Fragment {
 
 
-    public Fragment22() {
+    public Fragment23() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class Fragment22 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment22, container, false);
+        return inflater.inflate(R.layout.fragment_fragment23, container, false);
     }
 
 }
