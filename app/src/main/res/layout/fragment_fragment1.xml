@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                tools:context="com.example.bkmiecik.android3b2.Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="228080"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9.05.2017"
+            android:layout_gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bartłomiej Kmiecik"
+            android:layout_below="@+id/obrazek"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img3"
+            android:layout_gravity="center"
+            android:id="@+id/obrazek"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"/>
+
+</RelativeLayout>
