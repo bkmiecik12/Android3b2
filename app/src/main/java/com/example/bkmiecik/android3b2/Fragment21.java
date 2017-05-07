@@ -63,7 +63,7 @@ public class Fragment21 extends Fragment implements RadioGroup.OnCheckedChangeLi
             A1 = (AppCompatActivity) context;
             sluchaczF1 = (OnWyborOpcjiListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(sluchaczF1.toString() +
+            throw new ClassCastException(A1.toString() +
                     " musi implementować OnWyborOpcjiListener");
         }
         super.onAttach(context);

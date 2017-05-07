@@ -13,9 +13,9 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment2 extends Fragment implements Fragment21.OnWyborOpcjiListener {
+public class Fragment2 extends Fragment {
 
-    Fragment21 f21;
+    Fragment23 f23;
     Fragment22 f22;
     FragmentTransaction transakcja2;
 
@@ -31,36 +31,19 @@ public class Fragment2 extends Fragment implements Fragment21.OnWyborOpcjiListen
         return inflater.inflate(R.layout.fragment_fragment2, container, false);
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        System.out.println("Tu jesteśmy");
-        f21 = new Fragment21();
-        f22 = new Fragment22();
-        transakcja2 = getActivity().getSupportFragmentManager().beginTransaction();
-        transakcja2.add(R.id.kontener, f21);
-        transakcja2.detach(f21);
-        transakcja2.add(R.id.kontener, f22);
-        transakcja2.detach(f22);
-        transakcja2.commit();
-        System.out.println("Tu jesteśmy");
-    }
 
-    @Override
-    public void onWyborOpcji(int opcja) {
-        FragmentTransaction transakcja2 =
-                getActivity().getSupportFragmentManager().beginTransaction();
-        transakcja2.detach(f21);
-        transakcja2.detach(f22);
-
-        switch (opcja){
-            case 1:
-                transakcja2.attach(f21);
-                break;
-            case 2:
-                transakcja2.attach(f22);
-                break;
-        }
-        transakcja2.commit();
-    }
+    //    @Override
+//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//        System.out.println("Tu jesteśmy");
+//        f23 = new Fragment23();
+//        f22 = new Fragment22();
+//        transakcja2 = getActivity().getSupportFragmentManager().beginTransaction();
+//        transakcja2.add(R.id.kontener2, f22);
+//        transakcja2.detach(f22);
+//        transakcja2.add(R.id.kontener2, f23);
+//        transakcja2.detach(f23);
+//        transakcja2.commit();
+//        System.out.println("Tu jesteśmy");
+//    }
 }

@@ -10,8 +10,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     ActionBar bar;
     private Fragment1 f1;
     private Fragment2 f2;
-    private Fragment2 f21;
-    private Fragment2 f22;
+    private Fragment22 f22;
+    private Fragment23 f23;
     private Fragment3 f3;
     FragmentTransaction transakcja;
 
@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
 
         f1 = new Fragment1();
         f2 = new Fragment2();
+        f23 = new Fragment23();
+        f22 = new Fragment22();
         f3 = new Fragment3();
 
         transakcja = getSupportFragmentManager().beginTransaction();
@@ -52,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         transakcja.detach(f2);
         transakcja.add(R.id.kontener, f3);
         transakcja.detach(f3);
+        transakcja.add(R.id.kontener2, f23);
+        transakcja.detach(f23);
+        transakcja.add(R.id.kontener2, f22);
+        transakcja.detach(f22);
 
         transakcja.commit();
         bar.selectTab(o1);
@@ -93,15 +99,16 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     public void onWyborOpcji(int opcja) {
         FragmentTransaction transakcja2 =
                 getSupportFragmentManager().beginTransaction();
-        transakcja2.detach(f21);
+        transakcja2.detach(f23);
         transakcja2.detach(f22);
+
 
         switch (opcja){
             case 1:
-                transakcja2.attach(f21);
+                transakcja2.attach(f22);
                 break;
             case 2:
-                transakcja2.attach(f22);
+                transakcja2.attach(f23);
                 break;
         }
         transakcja2.commit();

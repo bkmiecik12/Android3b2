@@ -12,9 +12,8 @@
             android:id="@+id/fragment" tools:layout="@layout/fragment_fragment21"/>
     <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="323dp"
-            android:id="@+id/kontener2"
-            android:layout_weight="0.33">
+            android:layout_height="match_parent"
+            android:id="@+id/kontener2">
     </FrameLayout>
 
 </LinearLayout>
