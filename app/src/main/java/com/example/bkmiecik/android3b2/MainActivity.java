@@ -1,25 +1,30 @@
 package com.example.bkmiecik.android3b2;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener,Fragment21.OnWyborOpcjiListener{
 
     ActionBar bar;
     private Fragment1 f1;
     private Fragment2 f2;
-    private Fragment22 f22;
-    private Fragment23 f23;
+    public static Fragment22 f22;
+    public static Fragment23 f23;
     private Fragment3 f3;
     FragmentTransaction transakcja;
-
+    public static ArrayList<GrandPrix> grandPrixArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        grandPrixArrayList = new ArrayList<>();
 
         bar = getSupportActionBar();
         bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -113,4 +118,5 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         }
         transakcja2.commit();
     }
+
 }

@@ -42,7 +42,7 @@ public class Fragment21 extends Fragment implements RadioGroup.OnCheckedChangeLi
         super.onActivityCreated(savedInstanceState);
         ((RadioGroup) getActivity().findViewById(R.id.opcje)).
                 setOnCheckedChangeListener(this);
-        //((RadioGroup) getActivity().findViewById(R.id.opcje)).check(R.id.opcja1);
+        ((RadioGroup) getActivity().findViewById(R.id.opcje)).check(R.id.opcja1);
     }
 
     @Override

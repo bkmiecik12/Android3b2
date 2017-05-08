@@ -1,14 +1,58 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.example.bkmiecik.android3b2.Fragment22">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/fragment22"
+        tools:context="com.example.bkmiecik.android3b2.Fragment22">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DODAJ SGP"
+            android:layout_gravity="center_vertical"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kraj"/>
+    <Spinner
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="DODAJ SGP"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/kraj"
+            android:entries="@array/kraj_arrays"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Miasto"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/miasto"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dzika karta"/>
+    <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dzik"
+            android:prompt="@string/dzik_prompt"
+            android:entries="@array/dzik_arrays"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ocena widowiska"/>
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ocenagp"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/zapiszgp"
+            android:text="Zapisz"/>
 
 
-</FrameLayout>
+</LinearLayout>

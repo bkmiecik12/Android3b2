@@ -3,4 +3,29 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dzik_prompt">Wybierz zawodnika...</string>
+
+    <string-array name="kraj_arrays">
+        <item>POLAND</item>
+        <item>DENMARK</item>
+        <item>SWEDEN</item>
+        <item>LATVIA</item>
+        <item>CZECH REP</item>
+        <item>GREAT BRITAIN</item>
+        <item>GERMANY</item>
+        <item>AUSTRALIA</item>
+    </string-array>
+    <string-array name="dzik_arrays">
+        <item>NICK ŠKORJA</item>
+        <item>PRZEMYSŁAW PAWLICKI</item>
+        <item>PETER KILDEMAND</item>
+        <item>GRIGORIJ LAGUTA</item>
+        <item>VACLAV MILIK</item>
+        <item>CHRIS HARRIS</item>
+        <item>ANDREAS JONSSON</item>
+        <item>JANUSZ KOLODZIEJ</item>
+        <item>MARTIN SMOLINSKI</item>
+        <item>PAWEL PRZEDPELSKI</item>
+        <item>MAX FRICKE</item>
+    </string-array>
 </resources>
