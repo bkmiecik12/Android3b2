@@ -49,7 +49,7 @@ public class Fragment3 extends Fragment implements AdapterView.OnItemClickListen
         private LayoutInflater inflater = null;
         ArrayList<GrandPrix> grandPrixArrayList = MainActivity.grandPrixArrayList;
         public myAdapter(Context context, ArrayList<GrandPrix> users) {
-            super(context, R.layout.lrgp, users);
+            super(context, 0, users);
         }
 
 
@@ -88,7 +88,6 @@ public class Fragment3 extends Fragment implements AdapterView.OnItemClickListen
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         grandPrixArrayList = MainActivity.grandPrixArrayList;
-
         myAdapter adapter = new myAdapter(this.getContext(),grandPrixArrayList);
         ListView lista3 = (ListView) getActivity().findViewById(R.id.lista_gp);
         lista3.setAdapter(adapter);

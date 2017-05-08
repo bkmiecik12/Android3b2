@@ -48,7 +48,7 @@ public class Fragment22 extends Fragment {
                 System.out.println(grandPrixArrayList.isEmpty());
                 GrandPrix gp = new GrandPrix(String.valueOf(kraje.getSelectedItem()),miasto.getText().toString(),String.valueOf(dziki.getSelectedItem()), ocena.getRating());
                 grandPrixArrayList.add(gp);
-                Toast.makeText(getContext(),grandPrixArrayList.get(0).miasto,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Zapisano",Toast.LENGTH_SHORT).show();
             }
         });
 

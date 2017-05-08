@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     private Fragment4 f4;
 
     FragmentTransaction transakcja;
+
     public static ArrayList<GrandPrix> grandPrixArrayList;
     public static ArrayList<Eliga> eligaArrayList;
 

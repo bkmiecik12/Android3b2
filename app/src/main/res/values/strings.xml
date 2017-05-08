@@ -15,6 +15,7 @@
         <item>GERMANY</item>
         <item>AUSTRALIA</item>
     </string-array>
+
     <string-array name="dzik_arrays">
         <item>NICK ŠKORJA</item>
         <item>PRZEMYSŁAW PAWLICKI</item>
@@ -27,5 +28,16 @@
         <item>MARTIN SMOLINSKI</item>
         <item>PAWEL PRZEDPELSKI</item>
         <item>MAX FRICKE</item>
+    </string-array>
+
+    <string-array name="clubs">
+        <item>CZĘSTOCHOWA</item>
+        <item>LESZNO</item>
+        <item>TORUŃ</item>
+        <item>WROCŁAW</item>
+        <item>GORZÓW WLKP.</item>
+        <item>RYBNIK</item>
+        <item>GRUDZIĄDZ</item>
+        <item>ZIELONA GÓRA</item>
     </string-array>
 </resources>
