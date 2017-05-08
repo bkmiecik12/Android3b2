@@ -89,7 +89,7 @@ public class Fragment3 extends Fragment implements AdapterView.OnItemClickListen
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         grandPrixArrayList = MainActivity.grandPrixArrayList;
 
-        myAdapter adapter = new myAdapter(getContext(),grandPrixArrayList);
+        myAdapter adapter = new myAdapter(this.getContext(),grandPrixArrayList);
         ListView lista3 = (ListView) getActivity().findViewById(R.id.lista_gp);
         lista3.setAdapter(adapter);
         super.onActivityCreated(savedInstanceState);

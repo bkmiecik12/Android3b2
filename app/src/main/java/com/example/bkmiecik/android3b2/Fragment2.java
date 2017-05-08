@@ -31,21 +31,8 @@ public class Fragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        f21 = (Fragment21) getChildFragmentManager().findFragmentById(R.id.fragment21);
-        f22 = MainActivity.f22;
-        f23 = MainActivity.f23;
         View v = inflater.inflate(R.layout.fragment_fragment2, container, false);
         return v;
-    }
-
-    @Override
-    public void onPause() {
-        transakcja2 = getFragmentManager().beginTransaction();
-        //transakcja2.remove(f21);
-        transakcja2.remove(f23);
-        transakcja2.remove(f22);
-        transakcja2.commit();
-        super.onPause();
     }
 
     //    @Override
