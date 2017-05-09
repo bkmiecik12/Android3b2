@@ -49,7 +49,7 @@ public class Fragment3 extends Fragment implements AdapterView.OnItemClickListen
         private LayoutInflater inflater = null;
         ArrayList<GrandPrix> grandPrixArrayList = MainActivity.grandPrixArrayList;
         public myAdapter(Context context, ArrayList<GrandPrix> users) {
-            super(context, 0, users);
+            super(context, R.layout.lrgp, users);
         }
 
 

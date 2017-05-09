@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        grandPrixArrayList = new ArrayList<>();
-        eligaArrayList = new ArrayList<>();
+        grandPrixArrayList = new ArrayList<GrandPrix>();
+        eligaArrayList = new ArrayList<Eliga>();
 
         bar = getSupportActionBar();
         bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

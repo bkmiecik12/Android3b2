@@ -4,6 +4,7 @@ package com.example.bkmiecik.android3b2;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -32,7 +33,7 @@ public class Fragment4 extends Fragment implements AdapterView.OnItemClickListen
         ArrayList<Eliga> eligaArrayList = MainActivity.eligaArrayList;
 
         public MyAdapter1(Context context, ArrayList<Eliga> users) {
-            super(context, 0, users);
+            super(context, R.layout.lrel, users);
         }
 
 
@@ -76,11 +77,18 @@ public class Fragment4 extends Fragment implements AdapterView.OnItemClickListen
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_fragment4, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+
         eligaArrayList = MainActivity.eligaArrayList;
         MyAdapter1 adapter1 = new MyAdapter1(this.getContext(),eligaArrayList);
         ListView lista4 = (ListView) getActivity().findViewById(R.id.lista_el);
         lista4.setAdapter(adapter1);
-        return inflater.inflate(R.layout.fragment_fragment4, container, false);
+
+        super.onActivityCreated(savedInstanceState);
     }
 
     @Override

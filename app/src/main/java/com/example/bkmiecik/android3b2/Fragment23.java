@@ -2,6 +2,7 @@ package com.example.bkmiecik.android3b2;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,8 +24,8 @@ public class Fragment23 extends Fragment {
     Spinner sgosc;
     EditText epgosp;
     EditText epgosc;
-    private SeekBar seekBar;
-    Button zapis;
+    SeekBar seekBar;
+    Button zapisz;
 
     public Fragment23() {
         // Required empty public constructor
@@ -35,6 +36,13 @@ public class Fragment23 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
+        return inflater.inflate(R.layout.fragment_fragment23, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         eligaArrayList = MainActivity.eligaArrayList;
 
         sgosp = (Spinner) getActivity().findViewById(R.id.sgosp);
@@ -45,19 +53,17 @@ public class Fragment23 extends Fragment {
 
         seekBar = (SeekBar) getActivity().findViewById(R.id.seekBar);
 
-        zapis = (Button) getActivity().findViewById(R.id.zapiszel);
+        zapisz = (Button) getActivity().findViewById(R.id.zapiszel);
 
-        zapis.setOnClickListener(new View.OnClickListener() {
+        zapisz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Eliga eliga = new Eliga(String.valueOf(sgosp.getSelectedItem()),
-                        String.valueOf(sgosc.getSelectedItem()),
-                        Integer.valueOf(epgosp.getText().toString()),
-                        Integer.valueOf(epgosc.getText().toString()),0);
+                Eliga eliga = new Eliga(String.valueOf(sgosp.getSelectedItem()), String.valueOf(sgosc.getSelectedItem()), Integer.valueOf(epgosp.getText().toString()), Integer.valueOf(epgosc.getText().toString()),0);
                 eligaArrayList.add(eliga);
                 Toast.makeText(getContext(),"Zapisano",Toast.LENGTH_SHORT).show();
             }
         });
+
 
         seekBar.setMax(75);
         //seekBar.setProgress(1);
@@ -84,8 +90,6 @@ public class Fragment23 extends Fragment {
 
             }
         });
-
-        return inflater.inflate(R.layout.fragment_fragment23, container, false);
+        super.onActivityCreated(savedInstanceState);
     }
-
 }
