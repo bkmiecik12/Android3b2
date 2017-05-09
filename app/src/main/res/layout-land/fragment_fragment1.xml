@@ -18,18 +18,19 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bartłomiej Kmiecik"
-            android:textSize="25dp"
-            android:layout_marginTop="63dp" android:layout_below="@+id/obrazek" android:layout_centerHorizontal="true"/>
     <ImageView
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:src="@drawable/img2"
             android:layout_gravity="center"
             android:id="@+id/obrazek"
-            android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bartłomiej Kmiecik"
+            android:textSize="25dp"
+            android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"/>
 
 </RelativeLayout>

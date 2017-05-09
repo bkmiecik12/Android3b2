@@ -55,6 +55,8 @@ public class Fragment22 extends Fragment {
         super.onActivityCreated(savedInstanceState);
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

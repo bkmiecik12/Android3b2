@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         grandPrixArrayList = new ArrayList<GrandPrix>();
         eligaArrayList = new ArrayList<Eliga>();
 
+        grandPrixArrayList.add(new GrandPrix("SLOVENIA","Krsko","NICK ŠKORJA",2));
+        grandPrixArrayList.add(new GrandPrix("POLAND","Warszawa","PRZEMYSŁAW PAWLICKI",4.5));
+
+        eligaArrayList.add(new Eliga("TORUŃ","GORZÓW",44,46));
+        eligaArrayList.add(new Eliga("CZĘSTOCHOWA","RYBNIK",48,42));
+        eligaArrayList.add(new Eliga("LESZNO","WROCŁAW",44,46));
+        //eligaArrayList.add(new Eliga("ZIELONA GÓRA","GRUDZIĄDZ",44,46));
+
         bar = getSupportActionBar();
         bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
@@ -39,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
         ActionBar.Tab o3 = bar.newTab();
         ActionBar.Tab o4 = bar.newTab();
 
+
+        o1.setIcon(android.R.drawable.ic_menu_info_details);
+        o2.setIcon(android.R.drawable.ic_menu_add);
+        o3.setIcon(android.R.drawable.ic_media_ff);
+        o4.setIcon(android.R.drawable.ic_media_play);
         o1.setText("O autorze");
         o2.setText("Dodaj");
         o3.setText("Grand Prix");
@@ -117,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
 
     }
+
 
     @Override
     public void onWyborOpcji(int opcja) {

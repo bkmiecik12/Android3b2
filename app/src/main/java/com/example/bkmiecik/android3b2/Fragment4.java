@@ -19,7 +19,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment4 extends Fragment implements AdapterView.OnItemClickListener{
+public class Fragment4 extends Fragment{
 
     ArrayList<Eliga> eligaArrayList;
 
@@ -57,7 +57,7 @@ public class Fragment4 extends Fragment implements AdapterView.OnItemClickListen
             ImageView img = (ImageView) mV.findViewById(R.id.row_logo1);
 
             Eliga f = eligaArrayList.get(poss);
-            img.setImageResource(R.drawable.logo_gp);
+            img.setImageResource(R.drawable.logo_el);
 
             TextView tv1 = (TextView) mV.findViewById(R.id.row_home);
             tv1.setText(f.gosp);
@@ -87,26 +87,28 @@ public class Fragment4 extends Fragment implements AdapterView.OnItemClickListen
         MyAdapter1 adapter1 = new MyAdapter1(this.getContext(),eligaArrayList);
         ListView lista4 = (ListView) getActivity().findViewById(R.id.lista_el);
         lista4.setAdapter(adapter1);
+        lista4.setClickable(true);
+        lista4.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("WBIJAM!");
+                String string =
+                        "Gosp: "+eligaArrayList.get(position).gosp+
+                        "\nGoście: "+eligaArrayList.get(position).gosc+
+                        "\nWynik: "+eligaArrayList.get(position).pgosp+ " : "+eligaArrayList.get(position).pgosc;
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Ekstraliga")
+                        .setMessage(string)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_menu_more)
+                        .show();
+            }
+        });
 
         super.onActivityCreated(savedInstanceState);
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        System.out.println("WBIJAM!");
-        String string = "Runda nr "+eligaArrayList.get(position).runda+
-                "\nGosp: "+eligaArrayList.get(position).gosp+
-                "\nGoście: "+eligaArrayList.get(position).gosc+
-                "\nWynik: "+eligaArrayList.get(position).pgosp+ " : "+eligaArrayList.get(position);
-        new AlertDialog.Builder(view.getContext())
-                .setTitle("Ekstraliga")
-                .setMessage(string)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .setIcon(android.R.drawable.ic_menu_more)
-                .show();
     }
 
 

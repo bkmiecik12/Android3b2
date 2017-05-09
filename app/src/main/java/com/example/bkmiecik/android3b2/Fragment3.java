@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment3 extends Fragment implements AdapterView.OnItemClickListener{
+public class Fragment3 extends Fragment{
 
     ArrayList<GrandPrix> grandPrixArrayList;
 
@@ -26,29 +26,12 @@ public class Fragment3 extends Fragment implements AdapterView.OnItemClickListen
         // Required empty public constructor
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-        System.out.println("WBIJAM!");
-        String string = "FIM Speedway Grand Prix\nof"+grandPrixArrayList.get(position)+
-                "\nMiasto: "+grandPrixArrayList.get(position).miasto+
-                "\nDzika karta: "+grandPrixArrayList.get(position).dzik+
-                "\nOcena widowiska: "+grandPrixArrayList.get(position).ocena;
-        new AlertDialog.Builder(view.getContext())
-                .setTitle("SGP of "+grandPrixArrayList.get(position).kraj)
-                .setMessage(string)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .setIcon(android.R.drawable.ic_menu_more)
-                .show();
-    }
 
     public class myAdapter extends ArrayAdapter<GrandPrix> {
         private LayoutInflater inflater = null;
         ArrayList<GrandPrix> grandPrixArrayList = MainActivity.grandPrixArrayList;
         public myAdapter(Context context, ArrayList<GrandPrix> users) {
+
             super(context, R.layout.lrgp, users);
         }
 
@@ -91,6 +74,26 @@ public class Fragment3 extends Fragment implements AdapterView.OnItemClickListen
         myAdapter adapter = new myAdapter(this.getContext(),grandPrixArrayList);
         ListView lista3 = (ListView) getActivity().findViewById(R.id.lista_gp);
         lista3.setAdapter(adapter);
+        lista3.setClickable(true);
+        lista3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("WBIJAM!");
+                String string = "FIM Speedway Grand Prix\nof "+grandPrixArrayList.get(position).kraj+
+                        "\nMiasto: "+grandPrixArrayList.get(position).miasto+
+                        "\nDzika karta: "+grandPrixArrayList.get(position).dzik+
+                        "\nOcena widowiska: "+grandPrixArrayList.get(position).ocena;
+                new AlertDialog.Builder(view.getContext())
+                        .setTitle("SGP of "+grandPrixArrayList.get(position).kraj)
+                        .setMessage(string)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_menu_more)
+                        .show();
+            }
+        });
         super.onActivityCreated(savedInstanceState);
     }
 

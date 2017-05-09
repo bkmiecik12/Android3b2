@@ -58,7 +58,7 @@ public class Fragment23 extends Fragment {
         zapisz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Eliga eliga = new Eliga(String.valueOf(sgosp.getSelectedItem()), String.valueOf(sgosc.getSelectedItem()), Integer.valueOf(epgosp.getText().toString()), Integer.valueOf(epgosc.getText().toString()),0);
+                Eliga eliga = new Eliga(String.valueOf(sgosp.getSelectedItem()), String.valueOf(sgosc.getSelectedItem()), Integer.valueOf(epgosp.getText().toString()), Integer.valueOf(epgosc.getText().toString()));
                 eligaArrayList.add(eliga);
                 Toast.makeText(getContext(),"Zapisano",Toast.LENGTH_SHORT).show();
             }

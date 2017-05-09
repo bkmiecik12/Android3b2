@@ -10,11 +10,10 @@ public class Eliga {
     int pgosc;
     int runda;
 
-    public Eliga(String gosp, String gosc, int pgosp, int pgosc, int runda) {
+    public Eliga(String gosp, String gosc, int pgosp, int pgosc) {
         this.gosp = gosp;
         this.gosc = gosc;
         this.pgosp = pgosp;
         this.pgosc = pgosc;
-        this.runda = runda;
     }
 }
